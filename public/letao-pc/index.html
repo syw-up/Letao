@@ -9,13 +9,111 @@
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
     <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/common.css">
     <script src="./js/jquery-1.12.4.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
+    <script src="./lib/echarts/echarts.min.js"></script>
 </head>
-<body>
-    <div>123</div>
+<body>  
+    <!-- 左侧     -->
+ <div class="aside ">
+    <a href="./index.html" class="text-center">黑马18期</a>
+    <div class="user">
+        <img src="./images/default.jpg" alt="">
+        <p  class="text-center">超级管理员</p>
+    </div>
+    <!-- 菜单 -->
+    <div class="nav">
+        <ul>
+           <li>
+                <a href="" class="">
+                        <span class="glyphicon glyphicon-user"></span>
+                        用户管理
+                         
+                 </a>
+           </li>
+           <li>
+                <a href="javascript:;" class="">
+                        <span class="glyphicon glyphicon-list"></span>
+                        分类管理
+                      
+                 </a>
+                 <ul class="second_ul" style="display:none">
+                        <li><a href="" >一级分类</a></li>
+                        <li><a href="">二级分类</a></li>
+                </ul>
+           </li>
+           <li>
+                <a href="" class="">
+                     <span class="glyphicon glyphicon-tags"></span>
+                     商品管理
+            
+                 </a>
+           </li>
+
+
+
+
+        </ul>
+      
+      
+     
+    </div>
+   
+
+ </div>
+
+
+
+
+        <!-- 右侧主体 -->
+<div class="main ">
+     <div class="topbar">
+           <a href="javascript:;" class="pull-left"><span class="glyphicon glyphicon-align-justify"></span></a> 
+           <a href="javascript:;" class="pull-right"><span class="glyphicon glyphicon-log-out"></span></a>  
+    </div>
+    <ol class="breadcrumb">
+            <li><a href="#" >管理系统</a></li>
+            <li><a href="./index.html">首页</a></li>   
+    </ol>
+    <div class="main_content">
+         <div id="main" style="width: 600px;height:400px;" class="pull-left"></div>
+         <div id="main1" style="width: 600px;height:400px;" class="pull-right"></div>
+    </div>
+
+
+
+
+
+
+
+ </div>
+    <div class="sure_modal">
+     <div class="modal fade modal-dialog-sm " tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-sm" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                  <p class="text-danger">
+                    <span class="glyphicon glyphicon-info-sign"></span>
+                     您确定要退出后台管理系统吗</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button type="button" class="btn btn-primary">退出</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+         </div><!-- /.modal -->
+        </div>
+       
 </body>
 <script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
+
 </html>
