@@ -68,6 +68,7 @@
             if(info.error==1001){
                 $('form').data('bootstrapValidator').updateStatus("password",  "INVALID", 'callback');
             }
+
             if(info.success){
                 window.location.href='index.html';
             }
@@ -75,9 +76,17 @@
                
           }
         })
+      
+      
 
 
     })
+    //重置表单
+    $('form  button[type=reset]').on('click',function () { 
+        // $("form").data('bootstrapValidator').destroy();
+        // $('_form').data('bootstrapValidator', null);
+        $("form").data("bootstrapValidator").resetForm(true);
+     })
 
 
 
