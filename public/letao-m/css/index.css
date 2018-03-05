@@ -1,0 +1,29 @@
+.m_nav {
+    padding: 10px;
+}
+
+.m_nav li {
+    width: 33.33%;
+    float: left;  
+}
+.m_product {
+    padding: 10px;
+}
+.m_product li {
+    width: 48%;
+    float: left;
+    border: 1px  solid #ccc;
+    margin-right: 2%;
+    padding: 10px;
+    text-align: center;
+}
+.m_product li p{
+ text-align: center;
+}
+.m_product li span:nth-child(1){
+    color: red;
+}
+.m_product li span:nth-child(2){
+    color: #ccc;
+    text-decoration: line-through;
+}
