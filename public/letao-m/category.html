@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/category.css">
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src='./js/template-web.js'></script>
+</head>
+<body>
+    <div class="m_container">
+          <!-- 头部 -->
+     <div class="m_header">
+                <!-- <a href="" class="icon_left"><span class="fa fa-home"></span></a>
+                <h3>乐淘云购</h3>
+                <a href="" class="icon_right"><span class="fa fa-search"></span></a> -->
+     </div>
+            <!-- 主体 -->
+       <div class="m_main">
+            <!-- 左侧导航 -->
+           <div class="aside_nav">
+                <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                             <ul class="mui-clearfix left-nav">
+                                  
+                              </ul> 
+                        </div>
+                </div>
+
+           </div>
+
+           <!-- 右侧展示 -->
+           <div class="product_show">
+                <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            <ul class="mui-clearfix right-nav">
+                               
+                            </ul>
+                        </div>
+                </div>
+           </div>
+      </div>
+
+
+
+
+
+
+               <!-- 底部 -->
+    <div class="m_footer">
+                    <ul>
+                        <li >
+                            <a href="./index.html" >
+                                <span class="fa  fa-home"></span>
+                                <p>首页</p>
+                            </a>
+                        </li>
+                        <li class="active">
+                                <a href="">
+                                    <span class="fa  fa-bars"></span>
+                                    <p>分类</p>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="">
+                                    <span class="fa  fa-shopping-cart"></span>
+                                    <p>购物车</p>
+                                </a>
+                            </li>
+                            <li>
+                                    <a href="">
+                                        <span class="fa  fa-user"></span>
+                                        <p>会员中心</p>
+                                    </a>
+                         </li>
+                    </ul>
+                </div>
+    </div>
+</body>
+ <!-- 左侧模板 -->
+<script type="text/template" id="cate-tmp">
+    {{ each  rows v  i}}
+    <li class="{{v.id==1?'active':''}}" data-id={{v.id}}>
+            <a href="javascript:;">{{v.categoryName}}</a>
+    </li>
+    {{ /each }}            
+    
+</script>
+ <!-- 右侧模板 -->
+ <script type="text/template" id="second-tmp">
+    {{ each  rows v i}}
+     <li class="" data-id={{v.id}}>
+            <a href="javascript:;">
+                <img src="{{v.brandLogo}}" alt="">
+                <p>{{v.brandName}}</p>
+            </a>
+     </li>
+    {{ /each }}
+   
+   
+</script>
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
+<script src="./js/headerAndFooter.js"></script>
+</html>

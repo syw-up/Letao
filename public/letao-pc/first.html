@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/first.css">
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+    <script src="./lib/nprogress/nprogress.js"></script>
+    <script src="./js/template-web.js"></script>
+</head>
+<body>  
+    <!-- 左侧     -->
+ <div class="aside ">
+    <a href="./index.html" class="text-center">黑马18期</a>
+    <div class="user">
+        <img src="./images/default.jpg" alt="">
+        <p  class="text-center">超级管理员</p>
+    </div>
+    <!-- 菜单 -->
+    <div class="nav">
+        <ul>
+           <li>
+                <a href="./user.html" class="">
+                        <span class="glyphicon glyphicon-user"></span>
+                        用户管理
+                         
+                 </a>
+           </li>
+           <li class="active">
+                <a href="javascript:;" class="">
+                        <span class="glyphicon glyphicon-list"></span>
+                        分类管理
+                      
+                 </a>
+                 <ul class="second_ul" style="">
+                        <li ><a href="" class="active">一级分类</a></li>
+                        <li><a href="./second.html">二级分类</a></li>
+                </ul>
+           </li>
+           <li>
+                <a href="" class="">
+                     <span class="glyphicon glyphicon-tags"></span>
+                     商品管理
+            
+                 </a>
+           </li>
+
+
+
+
+        </ul>
+      
+      
+     
+    </div>
+   
+
+ </div>
+
+
+
+
+        <!-- 右侧主体 -->
+<div class="main ">
+     <div class="topbar">
+           <a href="javascript:;" class="pull-left"><span class="glyphicon glyphicon-align-justify"></span></a> 
+           <a href="javascript:;" class="pull-right"><span class="glyphicon glyphicon-log-out"></span></a>  
+    </div>
+    <ol class="breadcrumb">
+            <li><a href="#" >管理系统</a></li>
+            <li><a href="#">分类管理</a></li>
+            <li><a href="./first.htmll">一级分类</a></li>     
+    </ol>
+    <!-- 主体部分 -->
+    <div class="main_content">
+            <button class="btn btn-default pull-left" type="submit">添加分类</button>
+            <table class="table table-bordered" >
+                    <thead>
+                            <tr >
+                                <th class="text-center" width="20%">序号</th>
+                                <th class="text-center" width="80%">分类名称</th>
+                            </tr>
+                            <tbody>
+
+                            </tbody>
+                    </thead>
+            </table>
+            <!-- 分页 -->
+            <ul class="pagenation pull-right" id="pagenator"> </ul>
+
+                  
+         
+        
+    </div>
+
+
+
+
+
+
+
+ </div>
+ <!-- 模态框 -->
+    <div class="sure_modal">
+     <div class="modal fade modal-dialog-sm " tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-sm" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">添加分类</h4>
+                </div>
+                <form id="form">
+                        <div class="modal-body">
+                  
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="请输入一级分类的名称" name="categoryName">
+                            </div>
+                  
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                          <!--H5 autofoucus  autocomplete: form:给input指定form-->
+                          <!-- form="form" -->
+                          <button type="submit" class="btn btn-primary">添加</button>
+                        </div>
+               </form>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+         </div><!-- /.modal -->
+     </div>
+       
+</body>
+ <!-- 分类模板 -->
+ <script type="text/template" id="first-tmp">
+      {{each  rows  v  i}}
+         <tr>
+             <td>{{(page-1)*size+i+1}}</td>
+             <td>{{v.categoryName}}</td>
+         </tr>
+
+      {{ /each}}
+
+</script>
+<script src="./js/common.js"></script>
+<script src="./js/first.js"></script>
+
+
+
+</html>
