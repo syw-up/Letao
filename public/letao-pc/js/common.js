@@ -21,7 +21,7 @@
           url:'/employee/checkRootLogin',
           dataType:'json',
           success:function (info) { 
-            console.log(info);  
+           // console.log(info);  
             if(info.error == 400){
               // window.location.href='login.html'
             }
@@ -48,7 +48,7 @@
 
        });
 
-        $('.sure_modal .modal-footer button').eq(1).on('click',function () { 
+        $('.sure_modal .btn-login').on('click',function () { 
           $.ajax({
             type:'get',
             url:'/employee/employeeLogout',

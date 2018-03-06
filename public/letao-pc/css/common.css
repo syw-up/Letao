@@ -99,10 +99,13 @@ a, a:link, a:visited, a:hover, a:active {
     
 }
 .main .main_content {
-    padding-left: 50px;
+    padding-left: 30px;
 }
 .main .main_content canvas {
     width: 45%;
     height: 400px;
+}
+table tr {
+    text-align: center;
 }
 
