@@ -33,9 +33,9 @@
             })
 
          }
-         
-
-
+         //底部选中状态
+         $('.m_footer li').eq(1).addClass('active').siblings().removeClass('active');
+  
 
 
 
